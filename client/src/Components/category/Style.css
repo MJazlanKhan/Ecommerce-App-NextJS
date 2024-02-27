@@ -1,0 +1,22 @@
+.sidebaritems{
+    color:#8A8989
+}
+.color{
+    width:35px;
+    height:35px;
+}
+.colorsdiv p{
+    font-size: 13px;
+    margin-top: 3px;
+    color:#8A8989
+
+}
+.size div{
+    width: 55px;
+    height: 30px;
+    border: 1px solid #BEBCBD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}

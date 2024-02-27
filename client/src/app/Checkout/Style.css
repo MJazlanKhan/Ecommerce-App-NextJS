@@ -1,0 +1,6 @@
+.inputColumn .ant-row{
+    flex-direction: column !important;
+  }
+.inputColumn .ant-row .ant-col{
+text-align: left;
+}

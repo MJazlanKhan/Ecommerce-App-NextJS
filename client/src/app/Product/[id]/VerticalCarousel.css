@@ -1,0 +1,19 @@
+ .slick-list{
+    height: 50% !important;
+  }
+
+.slick-track{
+  height:100%  !important
+}
+.sizebtn{
+  height:35px;
+  border: 1px solid #BEBCBD;
+  border-radius: 10px;
+  width:35px
+}
+.color{
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+
+}

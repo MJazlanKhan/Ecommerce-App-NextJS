@@ -1,0 +1,26 @@
+.ant-form-item-label label{
+    color: #fff !important;
+    width:130px
+}
+.uploadbtn{
+    background: none;
+    height: 120px;
+    width:120px
+}
+
+.ant-pagination-item a{
+    color:#fff !important
+}
+.ant-pagination-item-active a{
+    color: #000 !important;
+}
+.typenone{
+    list-style: none;
+}
+.m8{
+    margin-bottom: 8px;
+}
+.acenter{
+    align-items: center;
+    display: flex;
+}
