@@ -15,7 +15,7 @@ const PaymentMethods = () => {
     const ManagingDetails = async () => {
         const ConvertedCart = JSON.parse(cart)
         setCartDetails(ConvertedCart)
-        const res = await axios.get(`http://localhost:9000/api/v1/user/${id}`)
+        const res = await axios.get(`https://ecommerce-app-nextjs.onrender.com/api/v1/user/${id}`)
         setUserDetails(res.data)
         console.log(res.data)
     }
@@ -39,7 +39,7 @@ const PaymentMethods = () => {
                     // userDetails: UserDetails,
                     paymentDetails: PaymentDetails
                 };
-                const res = await axios.post('http://localhost:9000/api/v1/newOrder', orderData);
+                const res = await axios.post('https://ecommerce-app-nextjs.onrender.com/api/v1/newOrder', orderData);
                 console.log(res);
                 message.success("Congrats !!! Order Placed Successfully")
                 localStorage.removeItem('cart')
