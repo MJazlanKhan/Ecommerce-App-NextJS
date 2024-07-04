@@ -17,7 +17,7 @@ const page = () => {
     }
     const submitValues = async () => {
         try {
-            const res = await axios.post('http://localhost:9000/api/v1/AdminLogin', Values)
+            const res = await axios.post('https://ecommerce-app-nextjs.onrender.com/api/v1/AdminLogin', Values)
             console.log(res)
             localStorage.setItem('token', res.data.token)
             localStorage.setItem('id', res.data.Id)
