@@ -8,7 +8,7 @@ import Link from 'next/link'
 const Arrivals = () => {
     const [Products, setProducts] = useState([])
     const displayProduct = async () => {
-        const res = await axios.get("http://localhost:9000/api/v1/Products")
+        const res = await axios.get("https://ecommerce-app-nextjs.onrender.com/api/v1/Products")
         const data = res.data
         const sortedProducts = data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         // Select the latest 4 products
