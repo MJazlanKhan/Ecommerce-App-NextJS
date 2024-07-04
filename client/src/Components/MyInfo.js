@@ -10,7 +10,7 @@ const MyInfo = () => {
     const userid = localStorage.getItem('id')
 
     const fetchUser =async()=>{
-        const res = await axios.get(`http://localhost:9000/api/v1/user/${userid}`)
+        const res = await axios.get(`https://ecommerce-app-nextjs.onrender.com/api/v1/user/${userid}`)
         setUser(res.data)
     }
     useEffect(() => {
