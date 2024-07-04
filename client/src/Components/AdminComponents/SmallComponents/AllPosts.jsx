@@ -28,7 +28,7 @@ const AllPosts = () => {
     // const navigate = useNavigate()
     const [form] = Form.useForm();
     const fetchCategories = async () => {
-        const res = await axios.get("http://localhost:9000/api/v1/Categories");
+        const res = await axios.get("https://ecommerce-app-nextjs.onrender.com/api/v1/Categories");
         console.log(res.data);
         setCategories(res.data);
     };
@@ -39,7 +39,7 @@ const AllPosts = () => {
     const loadPosts = async () => {
         try {
             setLoading(true)
-            const res = await axios.get("http://localhost:9000/api/v1/Products")
+            const res = await axios.get("https://ecommerce-app-nextjs.onrender.com/api/v1/Products")
             setPostData(res.data)
             setLoading(false)
 
@@ -78,7 +78,7 @@ const AllPosts = () => {
         // console.log(record)
         const postId = record._id
         try {
-            const res = await axios.delete(`http://localhost:9000/api/v1/Product/${postId}`)
+            const res = await axios.delete(`https://ecommerce-app-nextjs.onrender.com/api/v1/Product/${postId}`)
             if (res.status === 200) {
                 message.success("Post Has Been Deleted !!")
                 loadPosts()
@@ -102,7 +102,7 @@ const AllPosts = () => {
     const addNewCategory = async () => {
         console.log(name);
         try {
-            const res = await axios.post('http://localhost:9000/api/v1/NewCategory', { name });
+            const res = await axios.post('https://ecommerce-app-nextjs.onrender.com/api/v1/NewCategory', { name });
             console.log(res);
             message.success(name + " Created Sucessfully");
             setName(null);
@@ -185,7 +185,7 @@ const AllPosts = () => {
         try {
             setLoading("editpost")
             const values = await form.validateFields()
-            const res = await axios.put(`http://localhost:9000/api/v1/Product/${postId}`, EditingPost)
+            const res = await axios.put(`https://ecommerce-app-nextjs.onrender.com/api/v1/Product/${postId}`, EditingPost)
             console.log(res)
             if (res.status === 200) {
                 message.success("Post Updated SucessFully")
@@ -212,7 +212,7 @@ const AllPosts = () => {
     const removeImage = async (image) => {
         console.log(image)
         try {
-            const response = await axios.put(`http://localhost:9000/api/v1/product/${EditingPost._id}/images`, {
+            const response = await axios.put(`https://ecommerce-app-nextjs.onrender.com/api/v1/product/${EditingPost._id}/images`, {
                 image
             });
 
