@@ -14,7 +14,7 @@ const page = () => {
     const userid = localStorage.getItem('id')
     const [messageApi, contextHolder] = message.useMessage();
     const fetchUserDetails = async () => {
-        const res = await axios.get(`http://localhost:9000/api/v1/user/${userid}`)
+        const res = await axios.get(`https://ecommerce-app-nextjs.onrender.com/api/v1/user/${userid}`)
         console.log(res.data)
         setUser(res.data)
     }
@@ -27,7 +27,7 @@ const page = () => {
    
     const SubmitValues = async () => {
         try {
-            const res = await axios.put(`http://localhost:9000/api/v1/user/${userid}`, User)
+            const res = await axios.put(`https://ecommerce-app-nextjs.onrender.com/api/v1/user/${userid}`, User)
             console.log(res)
             fetchUserDetails()
             message.success('User Details Updated.. Add Your Payment Method to Proceed!!!')
