@@ -18,7 +18,7 @@ const page = ({ params }) => {
 
     const fetchProducts = async ()=>{
         try {
-            const res = await axios.get(`http://localhost:9000/api/v1/Products/${id}/all`)
+            const res = await axios.get(`https://ecommerce-app-nextjs.onrender.com/api/v1/Products/${id}/all`)
             console.log(res.data.products)
             setProducts(res.data.products)
         } catch (error) {
