@@ -16,7 +16,7 @@ const AllOrders = () => {
     const fetchOrdersData = async () => {
         setloading(true)
         try {
-            const res = await axios.get(`http://localhost:9000/api/v1/allOrders`);
+            const res = await axios.get(`https://ecommerce-app-nextjs.onrender.com/api/v1/allOrders`);
             console.log(res);
             // Ensure res.data is an array of orders
             if (Array.isArray(res.data)) {
@@ -58,7 +58,7 @@ const AllOrders = () => {
     }
 
     const handleStatus = async (record) => {
-        const res = await axios.put(`http://localhost:9000/api/v1/UpdateOrder/${record._id}`)
+        const res = await axios.put(`https://ecommerce-app-nextjs.onrender.com/api/v1/UpdateOrder/${record._id}`)
         message.success("Congrats on Completing Order")
         fetchOrdersData()
     }
