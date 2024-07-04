@@ -88,7 +88,7 @@ const page = () => {
     }
     const handleSubmit = async()=>{
         try {
-            const res = await axios.post('http://localhost:9000/api/v1/Signup', Details)
+            const res = await axios.post('https://ecommerce-app-nextjs.onrender.com/api/v1/Signup', Details)
             console.log(res)
             message.success(res.data.message)
             router.push('/Signin', { scroll: false })
