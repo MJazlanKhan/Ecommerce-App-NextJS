@@ -1,5 +1,5 @@
 
-# MERN STACK Job portal Website 
+# MERN STACK Ecommerce Website 
 
 This project is an ecommerce store application built using React.js for the frontend, Express.js and Node.js for the backend, MongoDB for the database, and Axios for API requests.
 
