@@ -15,7 +15,7 @@ const Productlist = (props) => {
 
   const fetchProducts = async ()=>{
     try {
-        const res = await axios.get(`http://localhost:9000/api/v1/Products/${props.data}`)
+        const res = await axios.get(`https://ecommerce-app-nextjs.onrender.com/api/v1/Products/${props.data}`)
         console.log(res.data[0].products)
         setProducts(res.data[0].products)
     } catch (error) {
