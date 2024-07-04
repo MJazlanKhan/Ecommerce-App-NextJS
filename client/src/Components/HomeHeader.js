@@ -75,7 +75,7 @@ const HomeHeader = () => {
   ];
   const fetchCategories = async () => {
     try {
-      const res = await axios.get('http://localhost:9000/api/v1/Categories')
+      const res = await axios.get('https://ecommerce-app-nextjs.onrender.com/api/v1/Categories')
       setMenu(res.data)
     } catch (error) {
       console.log(error)
@@ -87,7 +87,7 @@ const HomeHeader = () => {
   // };
   // const SearchProduct = async () => {
   //   try {
-  //     const response = await axios.get(`http://localhost:9000/api/v1/SearchProduct?word=${searchWord}`);
+  //     const response = await axios.get(`https://ecommerce-app-nextjs.onrender.com/api/v1/SearchProduct?word=${searchWord}`);
   //     setSearchWord(response.data || []);
   //     console.log(response.data);
   //   } catch (error) {
