@@ -24,7 +24,7 @@ const Page = ({ params, searchParams }) => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:9000/api/v1/Product/${params.id}`);
+        const res = await axios.get(`https://ecommerce-app-nextjs.onrender.com/api/v1/Product/${params.id}`);
         const data = res.data;
         console.log(data);
         setProduct(data);
@@ -43,7 +43,7 @@ const Page = ({ params, searchParams }) => {
 
   const fetchUserDetails = async () => {
     try {
-      const res = await axios.get(`http://localhost:9000/api/v1/user/${userid}`);
+      const res = await axios.get(`https://ecommerce-app-nextjs.onrender.com/api/v1/user/${userid}`);
       const userData = res.data;
       setProduct((prevProduct) => ({ ...prevProduct, userDetail: userData }));
     } catch (error) {
