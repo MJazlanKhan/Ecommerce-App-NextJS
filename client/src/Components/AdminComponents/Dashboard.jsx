@@ -17,18 +17,18 @@ const Dashboard = () => {
     ];
 
     const fetchProducts = async () => {
-        const res = await axios.get('http://localhost:9000/api/v1/Products')
+        const res = await axios.get('https://ecommerce-app-nextjs.onrender.com/api/v1/Products')
         console.log(res.data.length)
         setProducts(res.data)
     }
     const fetchUsers = async () => {
-        const res = await axios.get('http://localhost:9000/api/v1/Users')
+        const res = await axios.get('https://ecommerce-app-nextjs.onrender.com/api/v1/Users')
         console.log(res.data.length)
         setUsers(res.data)
     }
     const fetchOrders = async () => {
         try {
-            const res = await axios.get('http://localhost:9000/api/v1/allOrders')
+            const res = await axios.get('https://ecommerce-app-nextjs.onrender.com/api/v1/allOrders')
             setOrders(res.data)
         } catch (error) {
             console.log(error)
@@ -36,7 +36,7 @@ const Dashboard = () => {
     }
     const fetchCompletedOrders = async () => {
         try {
-            const res = await axios.get('http://localhost:9000/api/v1/allCompletedOrders')
+            const res = await axios.get('https://ecommerce-app-nextjs.onrender.com/api/v1/allCompletedOrders')
             setCompletedOrders(res.data)
         } catch (error) {
             console.log(error)
