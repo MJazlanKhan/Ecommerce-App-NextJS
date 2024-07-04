@@ -23,7 +23,7 @@ const NewPost = () => {
     productColors:[]
   });
   const fetchCategories = async () => {
-    const res = await axios.get("http://localhost:9000/api/v1/Categories");
+    const res = await axios.get("https://ecommerce-app-nextjs.onrender.com/api/v1/Categories");
     console.log(res.data);
     setCategories(res.data);
   };
@@ -39,7 +39,7 @@ const NewPost = () => {
   const addNewCategory = async () => {
     console.log(name);
     try {
-      const res = await axios.post('http://localhost:9000/api/v1/NewCategory', { name });
+      const res = await axios.post('https://ecommerce-app-nextjs.onrender.com/api/v1/NewCategory', { name });
       console.log(res);
       message.success(name + " Created Sucessfully");
       setName(null);
@@ -141,7 +141,7 @@ const NewPost = () => {
       setDetails({ ...Details, "productColors": ['rgba(0, 0, 0, 1)'] });
     }
     try {
-      const res = await axios.post('http://localhost:9000/api/v1/NewProduct', Details)
+      const res = await axios.post('https://ecommerce-app-nextjs.onrender.com/api/v1/NewProduct', Details)
       console.log(res)
       message.success("Product Post Created")
     } catch (error) {
