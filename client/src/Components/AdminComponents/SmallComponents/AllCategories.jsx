@@ -11,7 +11,7 @@ const AllCategories = () => {
 
     const fetchCategories = async () => {
         try {
-            const res = await axios.get('http://localhost:9000/api/v1/Categories');
+            const res = await axios.get('https://ecommerce-app-nextjs.onrender.com/api/v1/Categories');
             console.log(res.data);
             setCategories(res.data);
         } catch (error) {
@@ -25,7 +25,7 @@ const AllCategories = () => {
 
     const handleDelete = async (record) => {
         try {
-            const res = await axios.delete(`http://localhost:9000/api/v1/Category/${record._id}`)
+            const res = await axios.delete(`https://ecommerce-app-nextjs.onrender.com/api/v1/Category/${record._id}`)
             console.log(res)
             message.success(record.name + ` Category Deleted`)
             fetchCategories();
@@ -38,7 +38,7 @@ const AllCategories = () => {
     const handleEdit = async (record) => {
         console.log(record)
         try {
-            const res = await axios.put(`http://localhost:9000/api/v1/Category/${record._id}`,editCategoryName
+            const res = await axios.put(`https://ecommerce-app-nextjs.onrender.com/api/v1/Category/${record._id}`,editCategoryName
             )
             console.log(res)
             message.success(record.name + ` Category Updated`)
